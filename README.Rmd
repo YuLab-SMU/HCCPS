@@ -1,10 +1,18 @@
+---
+output:
+  md_document:
+    variant: gfm
+html_preview: false
+---
+
+
 # demo
 
 ```{r}
-library(hccscore48)
+library(HCCPS)
 
 demo_data = data.frame(sample1 = runif(4,1,10),sample2 = runif(4,1,10),sample3 = runif(4,1,10))
-rownames(demo_data) = hccscore48:::getID(c("SQSTM1","BIRC5","HSPB8","NCF2"))
+rownames(demo_data) = HCCPS:::getID(c("SQSTM1","BIRC5","HSPB8","NCF2"))
 
 score(demo_data)
 
